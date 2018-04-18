@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gbemmy.tictactoe.SinglePlayerGame"
+    android:background="@drawable/b1" >
+
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="end"
+        android:contentDescription="Exit"
+        android:onClick="onEClick"
+        android:src="@android:drawable/ic_input_delete"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageButton
+        android:id="@+id/replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="start"
+        android:contentDescription="restart"
+        android:onClick="onRClick"
+        android:src="@android:drawable/ic_menu_rotate" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/replay"
+        android:id="@+id/linearLayout2"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Player 1: "
+            android:layout_marginLeft="40dp"/>
+        <TextView
+            android:id="@+id/counter_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginLeft="20dp"
+            android:text="Player 2: "/>
+        <TextView
+            android:id="@+id/counter_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/player"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.4"
+                android:text="@string/default_player_turn_text"
+                android:textColor="#039BE5"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/Grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/darker_gray"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <Button
+                android:id="@+id/button00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:background="?attr/colorButtonNormal"
+                android:onClick="clickMove"
+                android:tag="[0]0]"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+
+
+            <Button
+                android:id="@+id/button01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:background="?attr/colorButtonNormal"
+                android:onClick="clickMove"
+                android:tag="[0][1]"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+
+            <Button
+                android:id="@+id/button02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:background="?attr/colorButtonNormal"
+                android:onClick="clickMove"
+                android:tag="[0][2]"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:background="?attr/colorButtonNormal"
+                android:onClick="clickMove"
+                android:tag="[1][0]"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:background="?attr/colorButtonNormal"
+                android:onClick="clickMove"
+                android:tag="[1][1]"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:background="?attr/colorButtonNormal"
+                android:onClick="clickMove"
+                android:tag="[1][2]"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_row="2"
+                android:layout_rowWeight="34"
+                android:onClick="clickMove"
+                android:tag="[2][0]"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:background="?attr/colorButtonNormal"
+                android:onClick="clickMove"
+                android:tag="[2][1]"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:background="?attr/colorButtonNormal"
+                android:onClick="clickMove"
+                android:tag="[2][2]"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+
+        </GridLayout>
+
+    </FrameLayout>
+
+    <Switch
+        android:id="@+id/SwitchPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/replay"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:showText="true"
+        android:text="SwitchPlay"
+        android:textOff="X"
+        android:textOn="O"
+        tools:checked="false" />
+
+
+
+</RelativeLayout>

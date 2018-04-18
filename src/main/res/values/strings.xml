@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="default_max_games" />
+    <string name="default_min_games" />
+    <string name="player_1_default_name" />
+    <string name="player_2_default_name" />
+    <string name="default_player_turn_text" />
+    <string name="initial_games_played_0" />
+    <string name="initial_games_played" />
+    <string name="demarcate_scores" />
+</resources>

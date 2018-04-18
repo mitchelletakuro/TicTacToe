@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/b1"
+    tools:context=".MenuActivity">
+
+    <Button
+        android:id="@+id/SinglePlayer"
+        android:text="Single player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="SinglePlayerGame"/>
+
+    <Button
+        android:id="@+id/MultiPlayer"
+        android:text="MultiPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/SinglePlayer"
+        android:layout_alignLeft="@+id/SinglePlayer"
+        android:layout_alignStart="@+id/SinglePlayer"
+        android:onClick="MultiPlayerGame" />
+
+    <Button
+        android:id="@+id/Instructions"
+        android:text="Instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/MultiPlayer"
+        android:layout_alignLeft="@+id/MultiPlayer"
+        android:layout_alignStart="@+id/MultiPlayer"
+        android:onClick="Instructions" />
+
+    <Button
+        android:text="About"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/About"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/Instructions"
+        android:layout_alignLeft="@+id/Instructions"
+        android:layout_alignStart="@+id/Instructions"
+        android:onClick="onAboutClick"/>
+
+    <Button
+        android:text="Exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Exit"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/About"
+        android:layout_alignLeft="@+id/About"
+        android:layout_alignStart="@+id/About"
+        android:onClick="OnExitClick"/>
+
+
+
+
+</RelativeLayout>

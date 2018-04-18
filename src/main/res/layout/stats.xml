@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/b1"
+    tools:context="com.example.gbemmy.tictactoe.Stats">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Result"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/player1Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/player_1_default_name"
+                android:textAlignment="center"
+                android:textColor="#546E7A"
+                android:textSize="30sp" />
+            <TextView
+                android:id="@+id/player1Wins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/initial_games_played"
+                android:textAlignment="center"
+                android:textColor="#424242"
+                android:textSize="25sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/demarcate_scores"
+                android:textAlignment="center"
+                android:textColor="#1a53ff"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/draws"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/initial_games_played"
+                android:textAlignment="center"
+                android:textColor="#424242"
+                android:textSize="25sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/demarcate_scores"
+                android:textAlignment="center"
+                android:textColor="#1a53ff"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/player2Wins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/initial_games_played"
+                android:textAlignment="center"
+                android:textColor="#424242"
+                android:textSize="25sp"/>
+            <TextView
+                android:id="@+id/player2Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/player_2_default_name"
+                android:textAlignment="center"
+                android:textColor="#546E7A"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:text="Exit"
+            android:onClick="onClickContinue"
+            android:textAlignment="center"
+            android:textColor="#000066"
+            android:textSize="20sp"
+            android:padding="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"/>
+
+
+</LinearLayout>
